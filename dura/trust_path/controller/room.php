@@ -45,7 +45,7 @@ class Dura_Controller_Room extends Dura_Abstract_Controller
 		if ( !$this->roomModel )
 		{
 			Dura_Class_RoomSession::delete();
-			Dura::trans(t("Room not found.", 'lounge'));
+			Dura::trans(t("Room not found."), 'lounge');
 		}
 	}
 
@@ -95,7 +95,7 @@ class Dura_Controller_Room extends Dura_Abstract_Controller
 
 		if ( count($this->roomModel->users) >= (int) $this->roomModel->limit )
 		{
-			Dura::trans(t("Room is full.", 'lounge'));
+			Dura::trans(t("Room is full."), 'lounge');
 		}
 
 		$unsetUsers = array();
@@ -134,7 +134,7 @@ class Dura_Controller_Room extends Dura_Abstract_Controller
 		{
 			if ( $userName == (string) $user->name and $userIcon == (string) $user->icon )
 			{
-				Dura::trans(t("Same name user exists. Please rename or change icon.", 'lounge'));
+				Dura::trans(t("Same name user exists. Please rename or change icon."), 'lounge');
 			}
 		}
 
