@@ -60,10 +60,10 @@ if ( !isset($_GET['fast']) )
 	
 		sleep(DURA_SLEEP_TIME);
 
-		if ( strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE') !== false ) // TODO
-		{
-			break;
-		}
+		//if ( strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE') !== false ) // TODO
+		//{
+		//	break;
+		//}
 	}
 }
 
