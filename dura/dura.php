@@ -28,7 +28,7 @@ class Dura
 	{
 		if ( defined('DURA_LOADED') ) return;
 
-		define('DURA_VERSION', '1.0.3');
+		define('DURA_VERSION', '1.0.4');
 
 		spl_autoload_register(array(__CLASS__, 'autoload'));
 
@@ -59,7 +59,9 @@ class Dura
 		$action     = self::get('action', 'default');
 
 		self::$Controller = self::putintoClassParts($controller);
+		self::$Controller = (self::$Controller != '') ? self::$Controller : self::putintoClassParts('default');
 		self::$Action     = self::putintoClassParts($action);
+		self::$Action     = (self::$Action != '') ? self::$Action : self::putintoClassParts('default');
 
 		self::$controller = self::putintoPathParts(self::$Controller);
 		self::$action     = self::putintoPathParts(self::$Action);
@@ -102,6 +104,7 @@ class Dura
 	public static function get($name, $default = null)
 	{
 		$request = ( isset($_GET[$name]) ) ? $_GET[$name] : $default;
+		if ( !is_array($request) && $request == null ) $request = $default;
 		if ( get_magic_quotes_gpc() and !is_array($request) ) $request = stripslashes($request);
 		return $request;
 	}
@@ -109,6 +112,7 @@ class Dura
 	public static function post($name, $default = null)
 	{
 		$request = ( isset($_POST[$name]) ) ? $_POST[$name] : $default;
+		if ( !is_array($request) && $request == null ) $request = $default;
 		if ( get_magic_quotes_gpc() and !is_array($request) ) $request = stripslashes($request);
 		return $request;
 	}

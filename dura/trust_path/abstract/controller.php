@@ -31,6 +31,11 @@ abstract class Dura_Abstract_Controller
 			$this->template = DURA_TEMPLATE_PATH.'/'.Dura::$controller.'.'.Dura::$action.'.php';
 		}
 
+		if ( !file_exists($this->template) )
+		{
+			die("Not Found");
+		}
+
 		$this->_escapeHtml($this->output);
 
 		ob_start();
