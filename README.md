@@ -63,10 +63,10 @@ setting.dist.phpをsetting.phpにリネームしてから修正してくださ�
 以下の各ディレクトリに、言語コード-国コード.php, 言語コード-国コード.jsをUTF-8エンコードで作ってください。  
 言語コードは"ISO 639 Language Codes"を参考にしてください。  
 ja-JP.php, ja-JP.jsをコピー＆リネームして翻訳するのが楽です。  
-<br>  
+<br>
 /trust_path/language/  
 /js/language/  
-<br>  
+<br>
 例：  
 /trust_path/language/en-US.php // 英語（アメリカ）  
 /js/language/en-US.js  
@@ -74,13 +74,13 @@ ja-JP.php, ja-JP.jsをコピー＆リネームして翻訳するのが楽です�
 /js/language/zh-TW.js  
 /trust_path/language/ko-KR.php // 韓国語（韓国）  
 /js/language/ko-KR.js  
-<br>  
+<br>
 言語対訳ファイルは左が原文、右が翻訳です。  
 左は修正せず、右を各言語に翻訳するようにしてください。  
-<br>  
+<br>
 例：  
 　　　　原文　　　　　　　　　　　　　翻訳  
 "Please input name." =&gt; "名前を決めてください。", // *.php  
 "Please input name." : "名前を決めてください。", // *.js  
-<br>  
+<br>
 言語の設定はsetting.phpのDURA_LANGUAGEで指定します。  
