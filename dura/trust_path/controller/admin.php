@@ -27,7 +27,7 @@ class Dura_Controller_Admin extends Dura_Abstract_Controller
 			Dura::redirect('lounge');
 		}
 
-		if ( Dura::post('name') )
+		if ( Dura::post('login') )
 		{
 			try
 			{

@@ -36,7 +36,7 @@ class Dura_Controller_CreateRoom extends Dura_Abstract_Controller
 
 		$this->_getInput();
 
-		if ( Dura::post('name') )
+		if ( Dura::post('submit') )
 		{
 			try
 			{
