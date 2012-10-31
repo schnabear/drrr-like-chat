@@ -562,7 +562,7 @@ jQuery(function($)
 		}
 
 		var height = $(this).find(".body").height() + 30 + 8;
-		var top = (Math.round((180 - height) / 2) + 23) * -1;
+		var top = (Math.round((180 - height) / 2) + 24) * -1;
 		var bgimg  = $(this).find(".body").css("background-image");
 		var rand = Math.floor(Math.random()*2);
 		var tailTop = "0px";
