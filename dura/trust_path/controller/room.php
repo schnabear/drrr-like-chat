@@ -331,7 +331,7 @@ class Dura_Controller_Room extends Dura_Abstract_Controller
 
 		$nextHostId = Dura::post('new_host');
 
-		if ( $nextHostId === '' )
+		if ( $nextHostId === '' || $this->_isHost($nextHostId) )
 		{
 			die(t("Host is invaild."));
 		}
