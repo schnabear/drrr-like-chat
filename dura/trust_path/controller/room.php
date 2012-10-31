@@ -371,7 +371,7 @@ class Dura_Controller_Room extends Dura_Abstract_Controller
 
 		$userId = Dura::post('ban_user');
 
-		if ( $userId === '' )
+		if ( $userId === '' || $this->_isHost($userId) )
 		{
 			die(t("User is invaild."));
 		}
