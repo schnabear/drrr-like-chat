@@ -3,9 +3,20 @@
 
 class Dura_Class_Xml extends SimpleXMLElement
 {
-	public function asXML()
+	public function asXML($string = '')
 	{
+		if ( !empty($string) )
+		{
+			return parent::asXML($string);
+		}
+
 		$string = parent::asXML();
+
+		if ( $string === false )
+		{
+			return false;
+		}
+
 		$this->_creanupXML($string);
 		return $string;
 	}
@@ -14,6 +25,16 @@ class Dura_Class_Xml extends SimpleXMLElement
 	{
 		$this->_objectToArray($this);
 		return $this;
+	}
+
+	public function addChild($name, $value = null, $namespace = null)
+	{
+		if ( is_string($value) )
+		{
+			$value = str_replace('&', '&amp;', $value);
+		}
+
+		return parent::addChild($name, $value, $namespace);
 	}
 
 	protected function _creanupXML(&$string)
