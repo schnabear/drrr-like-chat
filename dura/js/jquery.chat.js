@@ -105,7 +105,7 @@ jQuery(function($)
 	var submitMessage = function()
 	{
 		var message = textareaElement.val();
-		message.replace(/[\r\n]+/g, "");
+		message = message.replace(/[\r\n]+/g, "");
 
 		if ( message.replace(/^[ \n]+$/, '') == '' )
 		{
