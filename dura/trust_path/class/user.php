@@ -16,6 +16,7 @@ class Dura_Class_User
 	protected $name = null;
 	protected $icon = null;
 	protected $id   = null;
+	protected $ip   = null;
 	protected $expire = null;
 	protected $admin = false;
 	protected $language = null;
@@ -41,6 +42,7 @@ class Dura_Class_User
 		$this->name = $name;
 		$this->icon = $icon;
 		$this->id = md5($name.getenv('REMOTE_ADDR'));
+		$this->ip = getenv('REMOTE_ADDR');
 		$this->language = $language;
 		$this->admin = $admin;
 
@@ -56,7 +58,7 @@ class Dura_Class_User
 			$this->icon   = $user->icon;
 			$this->id     = $user->id;
 			$this->expire = $user->expire;
-			$this->id     = $user->id;
+			$this->ip     = $user->ip;
 			$this->language = $user->language;
 			$this->admin  = $user->admin;
 		}
@@ -96,6 +98,13 @@ class Dura_Class_User
 		if ( !$this->isUser() ) return false;
 
 		return $this->id;
+	}
+	
+	public function getIp()
+	{
+		if ( !$this->isUser() ) return false;
+
+		return $this->ip;
 	}
 
 	public function getLanguage()
