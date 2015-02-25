@@ -13,7 +13,7 @@ WHY DID I DEVELOPED THIS?
 
 LICENSE
 
-This application can be used under General Public License 3.
+This application is under General Public License 3.
 See License.txt
 
 
