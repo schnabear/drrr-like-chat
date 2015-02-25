@@ -46,8 +46,8 @@ return array(
 	"User is invaild." => "User is invaild.",
 	"Banned {1}." => "Banned {1}.",
 	"Language" => "Language",
-	"The language is not in the option." => "The language is not an the option.",
-	"Durarara like chat room" => "Durarara like chat room",
+	"The language is not in the option." => "The language is not an option.",
+	"Durarara like chat" => "Durarara like chat",
 	"Durarara fan community" => "Durarara fan community",
 );
 
