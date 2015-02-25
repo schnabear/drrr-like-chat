@@ -22,7 +22,6 @@ useComet = <?php e(DURA_USE_COMET) ?>;
 <script src="<?php e(DURA_URL) ?>/js/jquery.corner.js"></script>
 <script src="<?php e(DURA_URL) ?>/js/jquery.chat.js"></script>
 <?php endif ?>
-<?php if ( file_exists(DURA_TEMPLATE_PATH.'/header.html') ) require(DURA_TEMPLATE_PATH.'/header.html'); ?>
 </head>
 <body>
 <div id="body">
