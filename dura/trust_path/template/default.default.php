@@ -36,11 +36,11 @@
 
 </form>
 
-<?php if ( file_exists(DURA_TEMPLATE_PATH.'/footer.html') ) : ?>
+
 <div class="footer">
-<?php require DURA_TEMPLATE_PATH.'/footer.html' ?>
+<p><?php e(t("Durarara like chat room")) ?></p>
 </div>
-<?php endif ?>
+
 <div class="copyright">
 <a href="<?php e(Dura::url('admin')) ?>"><?php e("Admin") ?></a> |
 Durarara-like-chat Copyright (c) 2010 <a href="http://suin.asia/">Suin</a> | <a href="http://code.google.com/p/drrr-like-chat/">get this chat?</a></div>
