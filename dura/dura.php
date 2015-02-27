@@ -72,7 +72,7 @@ class Dura
 
 		if ( !class_exists($class) )
 		{
-			die("Invalid Access");
+			self::redirect();
 		}
 
 		$instance = new $class();

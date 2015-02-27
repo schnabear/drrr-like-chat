@@ -1,86 +1,69 @@
-## ◆概要
+INTRODUCTION
 
-アニメデュラララに出てくるチャットをモデルに作成したAjaxベースのチャットアプリケーションです。  
-http://suin.asia/2010/03/26/durarara_like_chat  
+This is Ajax-based Durarara-like-chat.
 
-
-## ◆開発動機
-
-・デュララに登場するチャットのインターフェイスが好き  
-・リアルタイムチャットはJavaやFlashが主流だが、PHPでもAjaxを駆使すれば実現可能ではないかという技術的な関心（特別な話ではない）  
+http://suin.asia/2010/03/26/durarara_like_chat (japanese)
 
 
-## ◆開発方針
+WHY DID I DEVELOPED THIS?
 
-・アニメに忠実に  
-
-
-## ◆ライセンス
-
-本アプリケーションはオープンソースであり、ライセンスはGPL3になります。  
-・本アプリケーションが無保証である  
-あなたはGPL3ライセンスに同意することで次の自由を行使できます。  
-・本アプリケーションを無制限に実行・利用する  
-あなたは以下を遵守することでソースコードを研究・改良・修正・再頒布・翻訳することができます。  
-・本アプリケーションの著作権表示を目立つ場所に適切に表示する  
-・本アプリケーションのライセンスを目立つ場所に適切に表示する  
-・本アプリケーションの再頒布物や二次的著作物にもGPL3ライセンスを適用する  
-詳しくはLicense.txtを御覧下さい。  
+- I like the interface of Durarara chat.
+- I wanted to try make chat with Ajax.
 
 
-## ◆動作要件
+LICENSE
 
-・PHP 5.2.11- (運が良ければ、5.2.0-で動くかも）  
-・mbstring  
-・/trust_path/xmlへの書き込み権限 [0777]  
-
-
-## ◆設置方法
-
-/duraを任意の場所に設置  
-/trust_path/xml に書き込み権限を与える  
+This application is under General Public License 3.
+See License.txt
 
 
-## ◆設定
+REQUIREMENTS
 
-setting.dist.phpをsetting.phpにリネームしてから修正してください。  
-
-
-## ◆ビープ音の有効化
-
-このパッケージにはライセンスの都合上、ビープ音の音源が付属しておりません。  
-ビープ音を有効にするには、各自でsound.mp3を用意し、/jsに配置してください。  
+- PHP 5.1.0 or later
+- mbstring
+- add writing permission(0777) to /trust_path/xml
 
 
-## ◆画像アイコンの追加
+HOW TO SET UP
 
-アイコンはicon_XXXX.gifという名前で、/cssディレクトリに配置してください。  
-なお、アイコンを追加した場合は、/css/style.cssを修正する必要があります。（CSSの知識が必要）  
+- add writing permission(0777) to /trust_path/xml
 
 
-## ◆翻訳・ローカリゼーション
+CONFIGURE SETTINGS
 
-以下の各ディレクトリに、言語コード-国コード.php, 言語コード-国コード.jsをUTF-8エンコードで作ってください。  
-言語コードは"ISO 639 Language Codes"を参考にしてください。  
-ja-JP.php, ja-JP.jsをコピー＆リネームして翻訳するのが楽です。  
-<br>
-/trust_path/language/  
-/js/language/  
-<br>
-例：  
-/trust_path/language/en-US.php // 英語（アメリカ）  
-/js/language/en-US.js  
-/trust_path/language/zh-TW.php // 中国語（台湾）  
-/js/language/zh-TW.js  
-/trust_path/language/ko-KR.php // 韓国語（韓国）  
-/js/language/ko-KR.js  
-<br>
-言語対訳ファイルは左が原文、右が翻訳です。  
-左は修正せず、右を各言語に翻訳するようにしてください。  
-<br>
-例：  
-　　　　原文　　　　　　　　　　　　　翻訳  
-"Please input name." =&gt; "名前を決めてください。", // *.php  
-"Please input name." : "名前を決めてください。", // *.js  
-<br>
-言語の設定はsetting.phpのDURA_LANGUAGEで指定します。  
+- Please rename setting.dist.php to setting.php, and modify it.
+
+
+SOUND EFFECT
+
+If you prepare sound.mp3 and put it under /js, the sound effect is available.
+
+
+ADDING ICONS
+
+put icons under /css. Icon names must be like icon_XXX.png.
+You have to modify /css/style.css, when you add your icons.
+
+
+TRANSLATION
+
+create two files {language code}-{country code}.php under /trust_path/language/ and {language code}-{country code}.js under /js/language/.
+
+Example:
+/trust_path/language/en-US.php // English（US）
+/js/language/en-US.js
+/trust_path/language/zh-TW.php // Chinese（Taiwan）
+/js/language/zh-TW.js
+/trust_path/language/ko-KR.php // Korean（South Korea）
+/js/language/ko-KR.js
+
+Left is source language.
+Right is target language.
+You must NOT modify source language.
+
+Example:
+       Source                Translation
+"Please input name." => "名前を決めてください。", // *.php
+"Please input name." : "名前を決めてください。", // *.js
+
+Site language setting is defined by DURA_LANGUAGE in setting.php.

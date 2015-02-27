@@ -28,8 +28,17 @@ class Dura_Controller_Logout extends Dura_Abstract_Controller
 		$this->_default();
 	}
 
+	protected function _toRoom()
+	{
+		if ( Dura_Class_RoomSession::isCreated() )
+		{
+			Dura::redirect('room');
+		}
+	}
+	
 	protected function _default()
 	{
+		$this->_toRoom();
 		session_destroy();
 
 		Dura::redirect();
